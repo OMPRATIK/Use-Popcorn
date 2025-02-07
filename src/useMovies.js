@@ -21,7 +21,7 @@ export function useMovies(query, callback) {
             { signal: controller.signal }
           );
           if (!res.ok)
-            throw new Error("Something went wromg woth fetching movies");
+            throw new Error("Something went wromg with fetching movies");
 
           const data = await res.json();
           if (data.Response === "False") throw new Error("Movies not found");
